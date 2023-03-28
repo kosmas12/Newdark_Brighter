@@ -144,6 +144,9 @@ void printCommandLine(int argc, char **argv) {
     // Originally, the command line is assigned to `debugString` using makeFormattedString()
     printf("Command line: %s", commandLine);
     std::cout << std::endl;
+#if !defined(__WIN32__)
+    free(commandLine);
+#endif
 }
 
 int main(int argc, char **argv) {
