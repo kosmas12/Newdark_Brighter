@@ -128,7 +128,7 @@ inline void printDesktopAndVirtualResolutions() {
 #endif
 }
 
-void printCommandLine(int argc, char **argv) {
+inline void printCommandLine(int argc, char **argv) {
     char *commandLine;
 #if defined(__WIN32__)
     commandLine = GetCommandLineA();
