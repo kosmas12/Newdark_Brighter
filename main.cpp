@@ -151,6 +151,10 @@ int main(int argc, char **argv) {
 
     long PID = getPID();
     std::string PIDString = makeFormattedString("PID: %d", PID);
+    // These are not always printed. Instead, in the original code
+    // there is a function pointer to a function that seems to print,
+    // and it's checked every time to see if it's pointing to code,
+    // and then it gets called if it's valid
     std::cout << PIDString << std::endl;
 
     /* TODO: Figure out how to get CPU info in a cross-platform way
